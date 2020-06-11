@@ -1,0 +1,3 @@
+vhdl work "matrix.vhd"
+vhdl work "file_reader.vhd"
+vhdl work "test_file_reader.vhd"
