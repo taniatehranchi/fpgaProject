@@ -83,6 +83,7 @@ process(clk)
 			end if; 
 		end if;
 	end process;
-
+	
+	
 end Behavioral;
 

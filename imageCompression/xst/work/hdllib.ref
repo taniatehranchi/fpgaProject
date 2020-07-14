@@ -1,6 +1,8 @@
-EN dct NULL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/DCT.vhd sub00/vhpl04 1591909605
+AR reg behavioral C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/register.vhd sub00/vhpl07 1594737371
+EN dct NULL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/DCT.vhd sub00/vhpl04 1594743276
 AR file_reader behavioral C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/file_reader.vhd sub00/vhpl01 1591902383
-PH matrix NULL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/matrix.vhd sub00/vhpl02 1591909603
-AR dct behavioral C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/DCT.vhd sub00/vhpl05 1591909606
-PB matrix matrix C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/matrix.vhd sub00/vhpl03 1591909604
+PH matrix NULL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/matrix.vhd sub00/vhpl02 1594743274
+AR dct behavioral C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/DCT.vhd sub00/vhpl05 1594743277
+PB matrix matrix C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/matrix.vhd sub00/vhpl03 1594743275
 EN file_reader NULL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/file_reader.vhd sub00/vhpl00 1591902382
+EN reg NULL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/register.vhd sub00/vhpl06 1594737370

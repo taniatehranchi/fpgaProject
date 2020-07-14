@@ -1,5 +1,0 @@
-set -tmpdir "C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/xst"
-elaborate
--ifn file_reader.prj
--ifmt mixed

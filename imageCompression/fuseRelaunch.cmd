@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -o "C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/test_file_reader_isim_beh.exe" -prj "C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/test_file_reader_beh.prj" "work.test_file_reader" 
