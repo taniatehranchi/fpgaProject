@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-07-14T22:05:48</DateModified>
-  <ModuleName>DCT</ModuleName>
-  <SummaryTimeStamp>2020-07-14T20:44:38</SummaryTimeStamp>
+  <DateModified>2020-07-14T23:09:33</DateModified>
+  <ModuleName>quantization</ModuleName>
+  <SummaryTimeStamp>2020-07-14T23:08:03</SummaryTimeStamp>
   <SavedFilePath>C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/iseconfig/DCT.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression\</ImplementationReportsDirectory>
-  <DateInitialized>2020-07-14T17:39:55</DateInitialized>
+  <DateInitialized>2020-07-14T22:42:45</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

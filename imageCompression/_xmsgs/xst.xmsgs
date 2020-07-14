@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="Xst" num="769" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/DCT.vhd</arg>&quot; line <arg fmt="%d" index="2">60</arg>: Operator &lt;<arg fmt="%s" index="3">DIVIDE</arg>&gt; must have constant operands or first operand must be power of 2
+<msg type="error" file="Xst" num="769" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/quantization.vhd</arg>&quot; line <arg fmt="%d" index="2">65</arg>: Operator &lt;<arg fmt="%s" index="3">DIVIDE</arg>&gt; must have constant operands or first operand must be power of 2
 </msg>
 
 </messages>
