@@ -5,7 +5,16 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="Xst" num="769" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/DCT.vhd</arg>&quot; line <arg fmt="%d" index="2">60</arg>: Operator &lt;<arg fmt="%s" index="3">DIVIDE</arg>&gt; must have constant operands or first operand must be power of 2
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/reg.vhd</arg>&quot; line <arg fmt="%d" index="2">114</arg>: Mux is complete : default of case is discarded
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">out_enable</arg>&gt; in unit &lt;<arg fmt="%s" index="2">reg</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="warning" file="Xst" num="2254" delta="old" >Area constraint could not be met for block &lt;<arg fmt="%s" index="1">reg</arg>&gt;, final ratio is <arg fmt="%i" index="2">153</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1336" delta="old" > (*) More than 100% of Device resources are used
 </msg>
 
 </messages>

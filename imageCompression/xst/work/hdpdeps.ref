@@ -1,28 +1,36 @@
-V3 15
+V3 19
+FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/counter.vhd 2020/07/17.01:39:32 P.20131013
+EN work/counter 1594933787 \
+      FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/counter.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_SIGNED 1381692178 PB ieee/NUMERIC_STD 1381692181
+AR work/counter/Behavioral 1594933788 \
+      FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/counter.vhd \
+      EN work/counter 1594933787
 FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/DCT.vhd 2020/07/17.01:02:10 P.20131013
-EN work/DCT 1594931548 \
+EN work/DCT 1594937116 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/DCT.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_SIGNED 1381692178 PB ieee/NUMERIC_STD 1381692181 \
-      PB work/matrix 1594931547
-AR work/DCT/Behavioral 1594931549 \
+      PB work/matrix 1594937435
+AR work/DCT/Behavioral 1594937117 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/DCT.vhd \
-      EN work/DCT 1594931548
+      EN work/DCT 1594937116
 FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/file_reader.vhd 2020/06/11.23:36:17 P.20131013
 EN work/file_reader 1591902382 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/file_reader.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
-      PB ieee/STD_LOGIC_SIGNED 1381692178 PB std/TEXTIO 1381692176 PB work/matrix 1594931547
+      PB ieee/STD_LOGIC_SIGNED 1381692178 PB std/TEXTIO 1381692176 PB work/matrix 1594937435
 AR work/file_reader/Behavioral 1591902383 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/file_reader.vhd \
       EN work/file_reader 1591902382
-FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/matrix.vhd 2020/07/14.19:11:31 P.20131013
-PH work/matrix 1594931546 \
+FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/matrix.vhd 2020/07/17.02:12:12 P.20131013
+PH work/matrix 1594937434 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/matrix.vhd \
       PB ieee/std_logic_1164 1381692176
-PB work/matrix 1594931547 \
+PB work/matrix 1594937435 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/matrix.vhd \
-      PH work/matrix 1594931546
+      PH work/matrix 1594937434
 FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/quantization.vhd 2020/07/14.23:18:17 P.20131013
 EN work/quantization 1594752504 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/quantization.vhd \
@@ -31,11 +39,13 @@ EN work/quantization 1594752504 \
 AR work/quantization/Behavioral 1594752505 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/quantization.vhd \
       EN work/quantization 1594752504
-FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/register.vhd 2020/07/14.19:06:05 P.20131013
-EN work/reg 1594737370 \
-      FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/register.vhd \
+FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/reg.vhd 2020/07/17.02:40:29 P.20131013
+EN work/reg 1594937436 \
+      FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/reg.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
-      PB ieee/STD_LOGIC_SIGNED 1381692178 PB work/matrix 1594931547
-AR work/reg/Behavioral 1594737371 \
-      FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/register.vhd \
-      EN work/reg 1594737370
+      PB ieee/STD_LOGIC_SIGNED 1381692178 PB ieee/NUMERIC_STD 1381692181 \
+      PB work/matrix 1594937435
+AR work/reg/Behavioral 1594937437 \
+      FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/reg.vhd \
+      EN work/reg 1594937436
+FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/register.vhd 2020/07/14.19:06:05 P.20131013

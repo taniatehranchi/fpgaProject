@@ -9,13 +9,13 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>DCT - Behavioral (C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/DCT.vhd)</SelectedItem>
+         <SelectedItem>counter - Behavioral (C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/counter.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000012c000000020000000000000000000000000200000064ffffffff0000008100000003000000020000012c0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>DCT - Behavioral (C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/DCT.vhd)</CurrentItem>
+      <CurrentItem>counter - Behavioral (C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/counter.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -64,28 +64,31 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Synthesize - XST</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000d6000000010000000100000000000000000000000064ffffffff000000810000000000000001000000d60000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Synthesize - XST</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/matrix C:|Users|taravat|Desktop|fpga-project|fpgaProject|imageCompression|matrix.vhd</ClosedNode>
+         <ClosedNode>/quantization_test - behavior C:|Users|taravat|Desktop|fpga-project|fpgaProject|imageCompression|quantization_test.vhd</ClosedNode>
+         <ClosedNode>/test_DCT - behavior C:|Users|taravat|Desktop|fpga-project|fpgaProject|imageCompression|test_DCT.vhd</ClosedNode>
+         <ClosedNode>/test_file_reader - behavior C:|Users|taravat|Desktop|fpga-project|fpgaProject|imageCompression|test_file_reader.vhd</ClosedNode>
          <ClosedNode>/testbench - behavior C:|Users|taravat|Desktop|fpga-project|fpgaProject|imageCompression|test_reg.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>test_DCT - behavior (C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/test_DCT.vhd)</SelectedItem>
+         <SelectedItem>test_counter - behavior (C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/test_counter.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000015d000000020000000000000000000000000200000064ffffffff0000008100000003000000020000015d0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000153000000020000000000000000000000000200000064ffffffff000000810000000300000002000001530000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>test_DCT - behavior (C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/test_DCT.vhd)</CurrentItem>
+      <CurrentItem>test_counter - behavior (C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/test_counter.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -94,13 +97,13 @@
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000d6000000010000000100000000000000000000000064ffffffff000000810000000000000001000000d60000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
