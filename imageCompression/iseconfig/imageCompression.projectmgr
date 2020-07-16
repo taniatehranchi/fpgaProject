@@ -9,13 +9,13 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>quantization - Behavioral (C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/quantization.vhd)</SelectedItem>
+         <SelectedItem>DCT - Behavioral (C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/DCT.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000013c000000020000000000000000000000000200000064ffffffff0000008100000003000000020000013c0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000012c000000020000000000000000000000000200000064ffffffff0000008100000003000000020000012c0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>quantization - Behavioral (C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/quantization.vhd)</CurrentItem>
+      <CurrentItem>DCT - Behavioral (C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/DCT.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -79,13 +79,13 @@
          <ClosedNode>/testbench - behavior C:|Users|taravat|Desktop|fpga-project|fpgaProject|imageCompression|test_reg.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>quantization_test - behavior (C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/quantization_test.vhd)</SelectedItem>
+         <SelectedItem>test_DCT - behavior (C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/test_DCT.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000015d000000020000000000000000000000000200000064ffffffff0000008100000003000000020000015d0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>quantization_test - behavior (C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/quantization_test.vhd)</CurrentItem>
+      <CurrentItem>test_DCT - behavior (C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/test_DCT.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -94,26 +94,26 @@
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000d6000000010000000100000000000000000000000064ffffffff000000810000000000000001000000d60000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000d6000000010000000100000000000000000000000064ffffffff000000810000000000000001000000d60000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_PACKAGE_BODY" guiview="Process" >
       <ClosedNodes>
@@ -154,6 +154,6 @@
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem/>
    </ItemView>
-   <SourceProcessView>000000ff0000000000000002000000e70000014901000000050100000002</SourceProcessView>
+   <SourceProcessView>000000ff000000000000000200000146000000f601000000050100000002</SourceProcessView>
    <CurrentView>Behavioral Simulation</CurrentView>
 </Project>
