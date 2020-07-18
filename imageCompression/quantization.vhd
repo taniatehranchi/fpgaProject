@@ -1,22 +1,3 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date:    22:15:30 07/14/2020 
--- Design Name: 
--- Module Name:    quantization - Behavioral 
--- Project Name: 
--- Target Devices: 
--- Tool versions: 
--- Description: 
---
--- Dependencies: 
---
--- Revision: 
--- Revision 0.01 - File Created
--- Additional Comments: 
---
-----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
@@ -35,7 +16,7 @@ end quantization;
 
 architecture Behavioral of quantization is
 
-	type matrix8_8 is array(0 to 7,0 to 7) of integer;
+	type matrix8_8 is array(0 to 7,0 to 7) of integer range 0 to 256;
 	signal quantization : matrix8_8:=((8,36,36,36,39,45,52,65),
 													(36,36,36,37,41,47,56,68),
 													(36,36,38,42,47,54,64,78),
@@ -47,7 +28,8 @@ architecture Behavioral of quantization is
 		--signal test:integer;
 
 begin
-	process(count)
+	process(count,in0,in1,in2,in3,in4,in5,in6,in7)
+	
 	variable temp0:integer;
 	variable temp1:integer;
 	variable temp2:integer;
@@ -61,7 +43,6 @@ begin
 	begin
 	
 	if count="000" then
-	--	test<=quantization(0,0);
 		temp0:=conv_integer(in0)/quantization(0,0);
 		temp1:=conv_integer(in1)/quantization(0,1);
 		temp2:=conv_integer(in2)/quantization(0,2);
@@ -142,6 +123,7 @@ begin
 		temp5:=conv_integer(in5)/quantization(7,5);
 		temp6:=conv_integer(in6)/quantization(7,6);
 		temp7:=conv_integer(in7)/quantization(7,7);
+		
 	end if;
 	
 	out0<=conv_std_logic_vector(temp0,32);
@@ -152,7 +134,6 @@ begin
 	out5<=conv_std_logic_vector(temp5,32);
 	out6<=conv_std_logic_vector(temp6,32);
 	out7<=conv_std_logic_vector(temp7,32);
-
 		
 	end process;
 	

@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/quantization.xst" -ofn "C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/quantization.syr" 

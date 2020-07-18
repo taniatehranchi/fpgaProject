@@ -107,8 +107,9 @@ BEGIN
           out6 => out6,
           out7 => out7
         );
+		  
 
-	count<="000";
+	count<="000" after 50 ns,"001" after 100 ns,"010" after 150 ns, "011" after 200 ns, "100" after 250 ns,"101" after 300 ns,"110" after 350 ns,"111" after 400 ns, "000" after 450 ns;
 	in0<=conv_std_logic_vector(150,32);
 	in1<=conv_std_logic_vector(180,32);
 	in2<=conv_std_logic_vector(210,32);
