@@ -1,3 +1,0 @@
-vhdl isim_temp "matrix.vhd"
-vhdl isim_temp "file_reader.vhd"
-vhdl isim_temp "test_file_reader.vhd"

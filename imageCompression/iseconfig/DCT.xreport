@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-07-17T01:41:26</DateModified>
-  <ModuleName>counter</ModuleName>
+  <DateModified>2020-07-18T21:40:37</DateModified>
+  <ModuleName>DCT</ModuleName>
   <SummaryTimeStamp>2020-07-17T01:39:55</SummaryTimeStamp>
   <SavedFilePath>C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression/iseconfig/DCT.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression\</ImplementationReportsDirectory>
