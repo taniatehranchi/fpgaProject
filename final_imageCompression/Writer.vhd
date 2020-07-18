@@ -20,11 +20,11 @@ begin
 		begin
 			if(clk'event and clk='1' and en='1') then 
 				if(b/=0)then
-					file_open(WriteFle_wr,"reduce.txt", append_mode);
+					file_open(WriteFle_wr,"output.txt", append_mode);
 					write (Line_wr, conv_integer(a));
 					writeline (WriteFle_wr, Line_wr);
 					write (Line_wr, conv_integer(b));
-			    writeline (WriteFle_wr, Line_wr);
+			    	writeline (WriteFle_wr, Line_wr);
 					file_close(WriteFle_wr);
 			end if; 
 		end if; 
