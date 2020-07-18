@@ -40,10 +40,10 @@ architecture structural of main is
 		
 	end component;
 	
-	component FileWriter
+	component Writer
 		Port ( 
 			clk,en 	: in STD_LOGIC; 
-			y1,y2 	: in STD_LOGIC_VECTOR (31 downto 0)
+			a,b 	: in STD_LOGIC_VECTOR (31 downto 0)
 		);
 	end component;
 	
@@ -143,7 +143,7 @@ begin
 					reset,enRLC,
 					enWrite);
 	
-	U8:FileWriter
+	U8:Writer
 		port map(clk,enWrite,l1,l2);
 		
 end structural;

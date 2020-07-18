@@ -4,30 +4,28 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_SIGNED.ALL;
 use std.textio.all;
 
-entity FileWriter is
+entity Writer is
 	Port ( 
 			clk , en : in STD_LOGIC; 
-			y1,y2		: in STD_LOGIC_VECTOR (31 downto 0)
+			a,b : in STD_LOGIC_VECTOR (31 downto 0)
 		);
-end FileWriter;
+end Writer;
 
-architecture Behavioral of FileWriter is
+architecture Behavioral of Writer is
 
 begin
 	process(clk)
-		FILE RamFile_wr : text;
-		variable RamFileLine_wr : line;
+		FILE WriteFle_wr : text;
+		variable Line_wr : line;
 		begin
-			if(clk'event and clk='1') then 
-				if (en='1') then
-					if(y2/=0)then
-						file_open(ramfile_wr,"reduce.txt", append_mode);
-						write (RamFileLine_wr, conv_integer(y1));
-						writeline (ramfile_wr, RamFileLine_wr);
-						write (RamFileLine_wr, conv_integer(y2));
-						writeline (ramfile_wr, RamFileLine_wr);
-						file_close(ramfile_wr);
-					end if;
+			if(clk'event and clk='1' and en='1') then 
+				if(b/=0)then
+					file_open(WriteFle_wr,"reduce.txt", append_mode);
+					write (Line_wr, conv_integer(a));
+					writeline (WriteFle_wr, Line_wr);
+					write (Line_wr, conv_integer(b));
+			    writeline (WriteFle_wr, Line_wr);
+					file_close(WriteFle_wr);
 			end if; 
 		end if; 
 	end process;
