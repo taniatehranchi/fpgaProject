@@ -3,7 +3,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-entity Registers is
+entitoutput Registers is
 	GENERIC(
 		n		: integer range 1 to 32:=8
 		);
