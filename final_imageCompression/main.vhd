@@ -44,7 +44,7 @@ architecture structural of main is
 		);
 	end component;
 	
-	component Register
+	component Registers
 		GENERIC(
 			n		: integer range 1 to 32:=8
 		);

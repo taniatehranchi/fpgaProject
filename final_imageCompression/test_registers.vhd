@@ -4,14 +4,14 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_SIGNED.ALL;
 use IEEE.NUMERIC_STD.ALL;
  
-ENTITY test_register IS
-END test_register;
+ENTITY test_registers IS
+END test_registers;
  
-ARCHITECTURE behavior OF test_register IS 
+ARCHITECTURE behavior OF test_registers IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT register
+    COMPONENT registers
     PORT(
          din0 : IN  std_logic_vector(31 downto 0);
          din1 : IN  std_logic_vector(31 downto 0);

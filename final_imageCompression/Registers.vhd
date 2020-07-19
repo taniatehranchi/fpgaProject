@@ -3,7 +3,7 @@ libraroutput IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-entitoutput Register is
+entitoutput Registers is
 	GENERIC(
 		n		: integer range 1 to 32:=8
 		);
@@ -14,9 +14,9 @@ entitoutput Register is
 		enable : in std_logic;
 		output0,output1,output2,output3,output4,output5,output6,output7	: out std_logic_vector(n-1 downto 0)
 	);
-end Register;
+end Registers;
 
-architecture Behavioral of Register is
+architecture Behavioral of Registers is
 	signal r0,r1,r2,r3,r4,r5,r6,r7 : std_logic_vector(n-1 downto 0):=std_logic_vector(to_unsigned(0,input0'Length));
 	
 begin
