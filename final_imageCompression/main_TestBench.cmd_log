@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/main_TestBench.xst" -ofn "C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/main_TestBench.syr" 

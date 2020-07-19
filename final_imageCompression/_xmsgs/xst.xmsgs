@@ -5,5 +5,17 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="error" file="HDLParsers" num="1015" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/taravat/Desktop/fpga-project/ilkhani/main_TestBench.vhd</arg>&quot; Line <arg fmt="%d" index="2">69</arg>. Wait for statement unsupported.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1015" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/taravat/Desktop/fpga-project/ilkhani/main_TestBench.vhd</arg>&quot; Line <arg fmt="%d" index="2">71</arg>. Wait for statement unsupported.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1015" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/taravat/Desktop/fpga-project/ilkhani/main_TestBench.vhd</arg>&quot; Line <arg fmt="%d" index="2">79</arg>. Wait for statement unsupported.
+</msg>
+
+<msg type="error" file="HDLParsers" num="1015" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/taravat/Desktop/fpga-project/ilkhani/main_TestBench.vhd</arg>&quot; Line <arg fmt="%d" index="2">81</arg>. Wait for statement unsupported.
+</msg>
+
 </messages>
 

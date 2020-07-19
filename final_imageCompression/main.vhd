@@ -45,12 +45,9 @@ architecture structural of main is
 	end component;
 	
 	component Counter
-		GENERIC(
-			n : integer range 0 to 31 :=3
-		);
 		PORT(
-			clk,en: in std_logic;
-			count : out std_logic_vector(n-1 downto 0)
+			clk,enable: in std_logic;
+			dout : out std_logic_vector(2 downto 0)
 		);
 	end component;
 	
@@ -134,7 +131,6 @@ begin
 		port map(clk,enReg,enZigZag,en);
 		
 	U1:Counter
-		generic map(3)
 		port map(clk,enReg,c);
 	
 	U2:file_reader 
