@@ -1,184 +1,180 @@
 
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use work.Pack.all;
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE work.Pack.ALL;
 
-entity ZigZag is
-	PORT(
-		x0,x1,x2,x3,x4,x5,x6,x7	: in 		std_logic_vector(31 downto 0);
-		y								: out 	matrix64;
-		clk,reset,en				: in 		std_logic;
-		oe								: out 	std_logic
+ENTITY Zigzag IS
+	PORT (
+		input0, input1, input2, input3, input4, input5, input6, input7 : IN std_logic_vector(31 DOWNTO 0);
+		outputMatrix : OUT matrix64;
+		clk, reset, enable : IN std_logic;
+		oe : OUT std_logic
 	);
-end ZigZag;
+END Zigzag;
 
-architecture Behavioral of ZigZag is
-	signal 	y0,y1,y2,y3,y4,y5,y6,y7,
-				y8,y9,y10,y11,y12,y13,y14,y15,
-				y16,y17,y18,y19,y20,y21,y22,y23,
-				y24,y25,y26,y27,y28,y29,y30,y31,
-				y32,y33,y34,y35,y36,y37,y38,y39,
-				y40,y41,y42,y43,y44,y45,y46,y47,
-				y48,y49,y50,y51,y52,y53,y54,y55,
-				y56,y57,y58,y59,y60,y61,y62,y63 : std_logic_vector(31 downto 0);
+ARCHITECTURE Behavioral OF Zigzag IS
+	SIGNAL y0, y1, y2, y3, y4, y5, y6, y7,
+	y8, y9, y10, y11, y12, y13, y14, y15,
+	y16, y17, y18, y19, y20, y21, y22, y23,
+	y24, y25, y26, y27, y28, y29, y30, y31,
+	y32, y33, y34, y35, y36, y37, y38, y39,
+	y40, y41, y42, y43, y44, y45, y46, y47,
+	y48, y49, y50, y51, y52, y53, y54, y55,
+	y56, y57, y58, y59, y60, y61, y62, y63 : std_logic_vector(31 DOWNTO 0);
 
-begin
-	process(clk,reset)
-		variable counter : integer range 0 to 8:=0;
-		begin
-			if(reset='1')then
-				y1<=(others=>'0');
-			elsif(clk' event and clk='1')then
-				if(en='1')then
-					if(counter=8) then
-						counter:=0;
-						oe<='1';
-					else
-						oe<='0';
-						case counter is
-							when 0=>
-							y0<=x0;
-							y1<=x1;
-							y5<=x2;
-							y6<=x3;
-							y14<=x4;
-							y15<=x5;
-							y27<=x6;
-							y28<=x7;
-						when 1=>
-							y2<=x0;
-							y4<=x1;
-							y7<=x2;
-							y13<=x3;
-							y16<=x4;
-							y26<=x5;
-							y29<=x6;
-							y42<=x7;
-						when 2=>
-							y3<=x0;
-							y8<=x1;
-							y12<=x2;
-							y17<=x3;
-							y25<=x4;
-							y30<=x5;
-							y41<=x6;
-							y43<=x7;
-						when 3=>
-							y9<=x0;
-							y11<=x1;
-							y18<=x2;
-							y24<=x3;
-							y31<=x4;
-							y40<=x5;
-							y44<=x6;
-							y53<=x7;
-						when 4=>
-							y10<=x0;
-							y19<=x1;
-							y23<=x2;
-							y32<=x3;
-							y39<=x4;
-							y45<=x5;
-							y52<=x6;
-							y54<=x7;
-						when 5=>
-							y20<=x0;
-							y22<=x1;
-							y33<=x2;
-							y38<=x3;
-							y46<=x4;
-							y51<=x5;
-							y55<=x6;
-							y60<=x7;
-						when 6=>
-							y21<=x0;
-							y34<=x1;
-							y37<=x2;
-							y47<=x3;
-							y50<=x4;
-							y56<=x5;
-							y59<=x6;
-							y61<=x7;
-						when 7=>
-							y35<=x0;
-							y36<=x1;
-							y48<=x2;
-							y49<=x3;
-							y57<=x4;
-							y58<=x5;
-							y62<=x6;
-							y63<=x7;
-						when others=>
-							oe<='0';
-						end case;
-						counter:=counter+1;
-					end if;
-				end if;
-			end if;
-	end process;
-								y(0)<=y0;
-								y(1)<=y1;
-								y(5)<=y5;
-								y(6)<=y6;
-								y(14)<=y14;
-								y(15)<=y15;
-								y(27)<=y27;
-								y(28)<=y28;
-								y(2)<=y2;
-								y(4)<=y4;
-								y(7)<=y7;
-								y(13)<=y13;
-								y(16)<=y16;
-								y(26)<=y26;
-								y(29)<=y29;
-								y(42)<=y42;
-								y(3)<=y3;
-								y(8)<=y8;
-								y(12)<=y12;
-								y(17)<=y17;
-								y(25)<=y25;
-								y(30)<=y30;
-								y(41)<=y41;
-								y(43)<=y43;
-								y(9)<=y9;
-								y(11)<=y11;
-								y(18)<=y18;
-								y(24)<=y24;
-								y(31)<=y31;
-								y(40)<=y40;
-								y(44)<=y44;
-								y(53)<=y53;
-								y(10)<=y10;
-								y(19)<=y19;
-								y(23)<=y23;
-								y(32)<=y32;
-								y(39)<=y39;
-								y(45)<=y45;
-								y(52)<=y52;
-								y(54)<=y54;
-								y(20)<=y20;
-								y(22)<=y22;
-								y(33)<=y33;
-								y(38)<=y38;
-								y(46)<=y46;
-								y(51)<=y51;
-								y(55)<=y55;
-								y(60)<=y60;
-								y(21)<=y21;
-								y(34)<=y34;
-								y(37)<=y37;
-								y(47)<=y47;
-								y(50)<=y50;
-								y(56)<=y56;
-								y(59)<=y59;
-								y(61)<=y61;
-								y(35)<=y35;
-								y(36)<=y36;
-								y(48)<=y48;
-								y(49)<=y49;
-								y(57)<=y57;
-								y(58)<=y58;
-								y(62)<=y62;
-								y(63)<=y63;
-end Behavioral;
-
+BEGIN
+	PROCESS (clk, reset)
+		VARIABLE counter : INTEGER RANGE 0 TO 8 := 0;
+	BEGIN
+		IF (reset = '1') THEN
+			y1 <= (OTHERS => '0');
+		ELSIF (clk' event AND clk = '1' AND enable = '1') THEN
+			IF (counter = 8) THEN
+				counter := 0;
+				oe <= '1';
+			ELSE
+				oe <= '0';
+				IF counter = 0 THEN
+					y0 <= input0;
+					y1 <= input1;
+					y5 <= input2;
+					y6 <= input3;
+					y14 <= input4;
+					y15 <= input5;
+					y27 <= input6;
+					y28 <= input7;
+				ELSIF counter = 1 THEN
+					y2 <= input0;
+					y4 <= input1;
+					y7 <= input2;
+					y13 <= input3;
+					y16 <= input4;
+					y26 <= input5;
+					y29 <= input6;
+					y42 <= input7;
+				ELSIF counter = 2 THEN
+					y3 <= input0;
+					y8 <= input1;
+					y12 <= input2;
+					y17 <= input3;
+					y25 <= input4;
+					y30 <= input5;
+					y41 <= input6;
+					y43 <= input7;
+				ELSIF counter = 3 THEN
+					y9 <= input0;
+					y11 <= input1;
+					y18 <= input2;
+					y24 <= input3;
+					y31 <= input4;
+					y40 <= input5;
+					y44 <= input6;
+					y53 <= input7;
+				ELSIF counter = 4 THEN
+					y10 <= input0;
+					y19 <= input1;
+					y23 <= input2;
+					y32 <= input3;
+					y39 <= input4;
+					y45 <= input5;
+					y52 <= input6;
+					y54 <= input7;
+				ELSIF counter = 5 THEN
+					y20 <= input0;
+					y22 <= input1;
+					y33 <= input2;
+					y38 <= input3;
+					y46 <= input4;
+					y51 <= input5;
+					y55 <= input6;
+					y60 <= input7;
+				ELSIF counter = 6 THEN
+					y21 <= input0;
+					y34 <= input1;
+					y37 <= input2;
+					y47 <= input3;
+					y50 <= input4;
+					y56 <= input5;
+					y59 <= input6;
+					y61 <= input7;
+				ELSIF counter = 7 THEN
+					y35 <= input0;
+					y36 <= input1;
+					y48 <= input2;
+					y49 <= input3;
+					y57 <= input4;
+					y58 <= input5;
+					y62 <= input6;
+					y63 <= input7;
+				ELSE
+					oe <= '0';
+					counter := counter + 1;
+				END IF;
+			END IF;
+		END IF;
+	END PROCESS;
+	outputMatrix(0) <= y0;
+	outputMatrix(1) <= y1;
+	outputMatrix(5) <= y5;
+	outputMatrix(6) <= y6;
+	outputMatrix(14) <= y14;
+	outputMatrix(15) <= y15;
+	outputMatrix(27) <= y27;
+	outputMatrix(28) <= y28;
+	outputMatrix(2) <= y2;
+	outputMatrix(4) <= y4;
+	outputMatrix(7) <= y7;
+	outputMatrix(13) <= y13;
+	outputMatrix(16) <= y16;
+	outputMatrix(26) <= y26;
+	outputMatrix(29) <= y29;
+	outputMatrix(42) <= y42;
+	outputMatrix(3) <= y3;
+	outputMatrix(8) <= y8;
+	outputMatrix(12) <= y12;
+	outputMatrix(17) <= y17;
+	outputMatrix(25) <= y25;
+	outputMatrix(30) <= y30;
+	outputMatrix(41) <= y41;
+	outputMatrix(43) <= y43;
+	outputMatrix(9) <= y9;
+	outputMatrix(11) <= y11;
+	outputMatrix(18) <= y18;
+	outputMatrix(24) <= y24;
+	outputMatrix(31) <= y31;
+	outputMatrix(40) <= y40;
+	outputMatrix(44) <= y44;
+	outputMatrix(53) <= y53;
+	outputMatrix(10) <= y10;
+	outputMatrix(19) <= y19;
+	outputMatrix(23) <= y23;
+	outputMatrix(32) <= y32;
+	outputMatrix(39) <= y39;
+	outputMatrix(45) <= y45;
+	outputMatrix(52) <= y52;
+	outputMatrix(54) <= y54;
+	outputMatrix(20) <= y20;
+	outputMatrix(22) <= y22;
+	outputMatrix(33) <= y33;
+	outputMatrix(38) <= y38;
+	outputMatrix(46) <= y46;
+	outputMatrix(51) <= y51;
+	outputMatrix(55) <= y55;
+	outputMatrix(60) <= y60;
+	outputMatrix(21) <= y21;
+	outputMatrix(34) <= y34;
+	outputMatrix(37) <= y37;
+	outputMatrix(47) <= y47;
+	outputMatrix(50) <= y50;
+	outputMatrix(56) <= y56;
+	outputMatrix(59) <= y59;
+	outputMatrix(61) <= y61;
+	outputMatrix(35) <= y35;
+	outputMatrix(36) <= y36;
+	outputMatrix(48) <= y48;
+	outputMatrix(49) <= y49;
+	outputMatrix(57) <= y57;
+	outputMatrix(58) <= y58;
+	outputMatrix(62) <= y62;
+	outputMatrix(63) <= y63;
+END Behavioral;

@@ -70,12 +70,12 @@ architecture structural of main is
 		);
 	end component;
 	
-	component ZigZag 
+	component Zigzag 
 		PORT(
-			x0,x1,x2,x3,x4,x5,x6,x7	: in  std_logic_vector(31 downto 0);
-			y								: out matrix64;
-			clk,reset,en				: in  std_logic;
-			oe								: out std_logic
+			input0,input1,input2,input3,input4,input5,input6,input7	: in  std_logic_vector(31 downto 0);
+			outputMatrix: out matrix64;
+			clk,reset,enable: in  std_logic;
+			oe: out std_logic
 		);
 	end component;
 	
@@ -97,12 +97,12 @@ architecture structural of main is
 	signal c									: std_logic_vector(2 downto 0);
 	signal m									: matrix64;
 	
-	signal enReg,enZigZag,enRLC,en,enWrite 		: std_logic;
+	signal enReg,enableZigzag,enRLC,en,enWrite 		: std_logic;
 	signal l1,l2											: std_logic_vector(31 downto 0);
 	
 begin
 	U0:Controller
-		port map(clk,enReg,enZigZag,en);
+		port map(clk,enReg,enableZigzag,en);
 		
 	U1:Counter
 		port map(clk,enReg,c);
@@ -127,10 +127,10 @@ begin
 					c,
 					z0,z1,z2,z3,z4,z5,z6,z7);
 	
-	U6:ZigZag
+	U6:Zigzag
 		port map(z0,z1,z2,z3,z4,z5,z6,z7,
 					m,
-					clk,reset,enZigZag,
+					clk,reset,enableZigzag,
 					enRLC);
 	U7:RLC 
 		port map(
