@@ -1,4 +1,3 @@
-
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
  
@@ -72,7 +71,7 @@ BEGIN
           out6 => out6,
           out7 => out7
         );
-
+		  
 		in0<="10100010";
 		in1<="10100010";
 		in2<="10100010";

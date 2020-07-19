@@ -1,0 +1,44 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/test_main_isim_beh.exe -prj C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/test_main_beh.prj work.test_main 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/matrix.vhd" into library work
+Parsing VHDL file "C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/ZigZag.vhd" into library work
+Parsing VHDL file "C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Writer.vhd" into library work
+Parsing VHDL file "C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/RLC.vhd" into library work
+Parsing VHDL file "C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Registers.vhd" into library work
+Parsing VHDL file "C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Quantization.vhd" into library work
+Parsing VHDL file "C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/FileReader.vhd" into library work
+Parsing VHDL file "C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/DCT.vhd" into library work
+Parsing VHDL file "C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Counter.vhd" into library work
+Parsing VHDL file "C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Controller.vhd" into library work
+Parsing VHDL file "C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/main.vhd" into library work
+Parsing VHDL file "C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/test_main.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package matrix
+Compiling package numeric_std
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package std_logic_signed
+Compiling package textio
+Compiling architecture behavioral of entity Controller [controller_default]
+Compiling architecture behavioral of entity counter [counter_default]
+Compiling architecture behavioral of entity file_reader [\file_reader("finalImage.txt",8)...]
+Compiling architecture behavioral of entity DCT [dct_default]
+Compiling architecture behavioral of entity Registers [registers_default]
+Compiling architecture behavioral of entity quantization [quantization_default]
+Compiling architecture behavioral of entity Zigzag [zigzag_default]
+Compiling architecture behavioral of entity RLC [rlc_default]
+Compiling architecture behavioral of entity Writer [writer_default]
+Compiling architecture structural of entity main [main_default]
+Compiling architecture behavior of entity test_main
+Time Resolution for simulation is 1ps.
+Waiting for 7 sub-compilation(s) to finish...
+Compiled 29 VHDL Units
+Built simulation executable C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/test_main_isim_beh.exe
+Fuse Memory Usage: 38216 KB
+Fuse CPU Usage: 1374 ms

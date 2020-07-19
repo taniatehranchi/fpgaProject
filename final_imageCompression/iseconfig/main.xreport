@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-07-18T21:46:40</DateModified>
-  <ModuleName>Controller</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <DateModified>2020-07-19T15:05:37</DateModified>
+  <ModuleName>main</ModuleName>
+  <SummaryTimeStamp>2020-07-19T15:05:21</SummaryTimeStamp>
   <SavedFilePath>C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/iseconfig/main.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression</ImplementationReportsDirectory>
-  <DateInitialized>2020-07-18T21:46:39</DateInitialized>
+  <ImplementationReportsDirectory>C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression\</ImplementationReportsDirectory>
+  <DateInitialized>2020-07-19T14:55:53</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

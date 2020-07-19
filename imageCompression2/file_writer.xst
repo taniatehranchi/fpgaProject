@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/xst"
+elaborate
+-ifn file_writer.prj
+-ifmt mixed

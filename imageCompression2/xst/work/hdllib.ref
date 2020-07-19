@@ -1,0 +1,14 @@
+AR quantization behavioral C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/Quantization.vhd sub00/vhpl01 1595182116
+EN dct NULL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/DCT.vhd sub00/vhpl08 1595184871
+AR main behavioral C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/main.vhd sub00/vhpl11 1595185068
+AR file_writer behavioral C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/file_writer.vhd sub00/vhpl07 1595184539
+AR zigzag behavioral C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/zigzag.vhd sub00/vhpl05 1595183232
+EN register_88 NULL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/register_88.vhd sub00/vhpl12 1595185532
+PH matrix NULL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/matrix.vhd sub00/vhpl02 1595185530
+AR dct behavioral C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/DCT.vhd sub00/vhpl09 1595184872
+EN quantization NULL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/Quantization.vhd sub00/vhpl00 1595182115
+PB matrix matrix C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/matrix.vhd sub00/vhpl03 1595185531
+EN main NULL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/main.vhd sub00/vhpl10 1595185067
+AR register_88 behavioral C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/register_88.vhd sub00/vhpl13 1595185533
+EN file_writer NULL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/file_writer.vhd sub00/vhpl06 1595184538
+EN zigzag NULL C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/zigzag.vhd sub00/vhpl04 1595183231

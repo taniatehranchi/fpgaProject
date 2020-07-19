@@ -1,0 +1,2 @@
+vhdl isim_temp "Quantization.vhd"
+vhdl isim_temp "test_quantization.vhd"

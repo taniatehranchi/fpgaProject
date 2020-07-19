@@ -1,0 +1,28 @@
+Command line:
+   test_quantization_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  54700
+
+Sun Jul 19 22:40:45 2020
+
+
+ Elaboration Time: 0.09375 sec
+
+ Current Memory Usage: 5163.97 Meg
+
+ Total Signals          : 39
+ Total Nets             : 516
+ Total Signal Drivers   : 20
+ Total Blocks           : 6
+ Total Primitive Blocks : 5
+ Total Processes        : 11
+ Total Traceable Variables  : 17
+ Total Scalar Nets and Variables : 1082
+
+ Total Simulation Time: 0.21875 sec
+
+ Current Memory Usage: 5006.68 Meg
+
+Sun Jul 19 22:43:17 2020
+

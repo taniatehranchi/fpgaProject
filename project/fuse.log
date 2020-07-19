@@ -1,0 +1,41 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o G:/FPGAProject/project/mtb_isim_beh.exe -prj G:/FPGAProject/project/mtb_beh.prj work.mtb 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "G:/FPGAProject/project/ArrayPack.vhd" into library work
+Parsing VHDL file "G:/FPGAProject/project/ZigZag.vhd" into library work
+Parsing VHDL file "G:/FPGAProject/project/RLC.vhd" into library work
+Parsing VHDL file "G:/FPGAProject/project/Reg8_8.vhd" into library work
+Parsing VHDL file "G:/FPGAProject/project/Quantization.vhd" into library work
+Parsing VHDL file "G:/FPGAProject/project/FileReader.vhd" into library work
+Parsing VHDL file "G:/FPGAProject/project/DCT.vhd" into library work
+Parsing VHDL file "G:/FPGAProject/project/main.vhd" into library work
+WARNING:HDLCompiler:946 - "G:/FPGAProject/project/main.vhd" Line 99: Actual for formal port clk is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "G:/FPGAProject/project/main.vhd" Line 100: Actual for formal port clk is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "G:/FPGAProject/project/main.vhd" Line 101: Actual for formal port clk is neither a static name nor a globally static expression
+Parsing VHDL file "G:/FPGAProject/project/mtb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package arraypack
+Compiling package numeric_std
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package std_logic_signed
+Compiling package textio
+Compiling architecture behavioral of entity DCT [dct_default]
+Compiling architecture behavioral of entity FileReader [\FileReader("inputFile.txt",9,0)...]
+Compiling architecture behavioral of entity Quantization [quantization_default]
+Compiling architecture behavioral of entity Reg8_8 [reg8_8_default]
+Compiling architecture behavioral of entity ZigZag [zigzag_default]
+Compiling architecture behavioral of entity RLC [rlc_default]
+Compiling architecture behavioral of entity main [main_default]
+Compiling architecture behavior of entity mtb
+Time Resolution for simulation is 1ps.
+Waiting for 3 sub-compilation(s) to finish...
+Compiled 23 VHDL Units
+Built simulation executable G:/FPGAProject/project/mtb_isim_beh.exe
+Fuse Memory Usage: 37204 KB
+Fuse CPU Usage: 687 ms

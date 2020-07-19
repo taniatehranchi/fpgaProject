@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/DCT.xst" -ofn "C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/DCT.syr" 
+xst -intstyle ise -ifn "C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/DCT.xst" -ofn "C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/DCT.syr" 
+xst -intstyle ise -ifn "C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/DCT.xst" -ofn "C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/DCT.syr" 
+xst -intstyle ise -ifn "C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/DCT.xst" -ofn "C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/DCT.syr" 

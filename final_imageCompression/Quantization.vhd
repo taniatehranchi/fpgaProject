@@ -8,8 +8,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity quantization is
 port(	
 		in0,in1,in2,in3,in4,in5,in6,in7: in std_logic_vector(31 downto 0);
-		count: in std_logic_vector(2 downto 0);
-		
+		count: in std_logic_vector(2 downto 0);	
 		out0,out1,out2,out3,out4,out5,out6,out7: out std_logic_vector(31 downto 0)
 );
 end quantization;

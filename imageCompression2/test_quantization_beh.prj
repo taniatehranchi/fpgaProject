@@ -1,0 +1,2 @@
+vhdl work "Quantization.vhd"
+vhdl work "test_quantization.vhd"

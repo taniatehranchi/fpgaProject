@@ -1,40 +1,39 @@
-
-LIBRARY IEEE;
-USE IEEE.STD_LOGIC_1164.ALL;
-USE work.Pack.ALL;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+use IEEE.std_logic_unsigned.ALL;
+USE work.matrix.ALL;
 
 ENTITY Zigzag IS
 	PORT (
 		input0, input1, input2, input3, input4, input5, input6, input7 : IN std_logic_vector(31 DOWNTO 0);
+		clk : IN std_logic;
 		outputMatrix : OUT matrix64;
-		clk, reset, enable : IN std_logic;
 		oe : OUT std_logic
 	);
 END Zigzag;
 
 ARCHITECTURE Behavioral OF Zigzag IS
-	SIGNAL y0, y1, y2, y3, y4, y5, y6, y7,
+	signal y0, y1, y2, y3, y4, y5, y6, y7,
 	y8, y9, y10, y11, y12, y13, y14, y15,
 	y16, y17, y18, y19, y20, y21, y22, y23,
 	y24, y25, y26, y27, y28, y29, y30, y31,
 	y32, y33, y34, y35, y36, y37, y38, y39,
 	y40, y41, y42, y43, y44, y45, y46, y47,
 	y48, y49, y50, y51, y52, y53, y54, y55,
-	y56, y57, y58, y59, y60, y61, y62, y63 : std_logic_vector(31 DOWNTO 0);
+	y56, y57, y58, y59, y60, y61, y62, y63 : std_logic_vector(31 DOWNTO 0):=(others=>'0');
 
 BEGIN
-	PROCESS (clk, reset)
-		VARIABLE counter : INTEGER RANGE 0 TO 8 := 0;
+	PROCESS (clk)
+		VARIABLE count : INTEGER RANGE 0 TO 8 := 0;
 	BEGIN
-		IF (reset = '1') THEN
-			y1 <= (OTHERS => '0');
-		ELSIF (clk' event AND clk = '1' AND enable = '1') THEN
-			IF (counter = 8) THEN
-				counter := 0;
+		IF (clk'event AND clk = '1') THEN
+			IF (count = 8) THEN
+				count := 0;
 				oe <= '1';
 			ELSE
 				oe <= '0';
-				IF counter = 0 THEN
+				IF count = 0 THEN
 					y0 <= input0;
 					y1 <= input1;
 					y5 <= input2;
@@ -43,7 +42,9 @@ BEGIN
 					y15 <= input5;
 					y27 <= input6;
 					y28 <= input7;
-				ELSIF counter = 1 THEN
+					count := count + 1;
+
+				ELSIF count = 1 THEN
 					y2 <= input0;
 					y4 <= input1;
 					y7 <= input2;
@@ -52,7 +53,9 @@ BEGIN
 					y26 <= input5;
 					y29 <= input6;
 					y42 <= input7;
-				ELSIF counter = 2 THEN
+					count := count + 1;
+
+				ELSIF count = 2 THEN
 					y3 <= input0;
 					y8 <= input1;
 					y12 <= input2;
@@ -61,7 +64,9 @@ BEGIN
 					y30 <= input5;
 					y41 <= input6;
 					y43 <= input7;
-				ELSIF counter = 3 THEN
+					count := count + 1;
+
+				ELSIF count = 3 THEN
 					y9 <= input0;
 					y11 <= input1;
 					y18 <= input2;
@@ -70,7 +75,9 @@ BEGIN
 					y40 <= input5;
 					y44 <= input6;
 					y53 <= input7;
-				ELSIF counter = 4 THEN
+					count := count + 1;
+
+				ELSIF count = 4 THEN
 					y10 <= input0;
 					y19 <= input1;
 					y23 <= input2;
@@ -79,7 +86,9 @@ BEGIN
 					y45 <= input5;
 					y52 <= input6;
 					y54 <= input7;
-				ELSIF counter = 5 THEN
+					count := count + 1;
+
+				ELSIF count = 5 THEN
 					y20 <= input0;
 					y22 <= input1;
 					y33 <= input2;
@@ -88,7 +97,9 @@ BEGIN
 					y51 <= input5;
 					y55 <= input6;
 					y60 <= input7;
-				ELSIF counter = 6 THEN
+					count := count + 1;
+
+				ELSIF count = 6 THEN
 					y21 <= input0;
 					y34 <= input1;
 					y37 <= input2;
@@ -97,7 +108,9 @@ BEGIN
 					y56 <= input5;
 					y59 <= input6;
 					y61 <= input7;
-				ELSIF counter = 7 THEN
+					count := count + 1;
+
+				ELSIF count = 7 THEN
 					y35 <= input0;
 					y36 <= input1;
 					y48 <= input2;
@@ -106,13 +119,13 @@ BEGIN
 					y58 <= input5;
 					y62 <= input6;
 					y63 <= input7;
-				ELSE
-					oe <= '0';
-					counter := counter + 1;
+					count := count + 1;
+				
 				END IF;
 			END IF;
 		END IF;
 	END PROCESS;
+	
 	outputMatrix(0) <= y0;
 	outputMatrix(1) <= y1;
 	outputMatrix(5) <= y5;
@@ -177,4 +190,5 @@ BEGIN
 	outputMatrix(58) <= y58;
 	outputMatrix(62) <= y62;
 	outputMatrix(63) <= y63;
+	
 END Behavioral;

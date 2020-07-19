@@ -1,35 +1,35 @@
-V3 42
-FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Controller.vhd 2019/07/11.13:14:24 P.20131013
-EN work/Controller 1595094987 \
+V3 50
+FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Controller.vhd 2020/07/19.14:06:50 P.20131013
+EN work/Controller 1595153131 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Controller.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Controller/Behavioral 1595094988 \
+AR work/Controller/Behavioral 1595153132 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Controller.vhd \
-      EN work/Controller 1595094987
+      EN work/Controller 1595153131
 FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Counter.vhd 2020/07/18.22:43:30 P.20131013
-EN work/Counter 1595096046 \
+EN work/Counter 1595156317 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Counter.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/Counter/Behavioral 1595096047 \
+AR work/Counter/Behavioral 1595156318 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Counter.vhd \
-      EN work/Counter 1595096046
-FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/DCT.vhd 2020/07/18.22:07:03 P.20131013
-EN work/DCT 1595094993 \
+      EN work/Counter 1595156317
+FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/DCT.vhd 2020/07/19.05:05:18 P.20131013
+EN work/DCT 1595153137 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/DCT.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_SIGNED 1381692178 PB ieee/NUMERIC_STD 1381692181
-AR work/DCT/Behavioral 1595094994 \
+AR work/DCT/Behavioral 1595153138 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/DCT.vhd \
-      EN work/DCT 1595094993
+      EN work/DCT 1595153137
 FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/FileReader.vhd 2020/07/18.22:03:15 P.20131013
-EN work/file_reader 1595094991 \
+EN work/file_reader 1595153135 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/FileReader.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_SIGNED 1381692178 PB std/TEXTIO 1381692176
-AR work/file_reader/Behavioral 1595094992 \
+AR work/file_reader/Behavioral 1595153136 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/FileReader.vhd \
-      EN work/file_reader 1595094991
+      EN work/file_reader 1595153135
 FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/FileWriter.vhd 2019/07/10.22:22:40 P.20131013
 EN work/FileWriter 1595095003 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/FileWriter.vhd \
@@ -38,48 +38,64 @@ EN work/FileWriter 1595095003 \
 AR work/FileWriter/Behavioral 1595095004 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/FileWriter.vhd \
       EN work/FileWriter 1595095003
-FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/main.vhd 2020/07/18.22:19:44 P.20131013
-EN work/main 1595095005 \
+FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/main.vhd 2020/07/19.14:29:17 P.20131013
+EN work/main 1595153149 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/main.vhd \
-      PB ieee/std_logic_1164 1381692176 PB work/Pack 1595094986
-AR work/main/structural 1595095006 \
+      PB ieee/std_logic_1164 1381692176 PB work/Pack 1595153130
+AR work/main/structural 1595153150 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/main.vhd \
-      EN work/main 1595095005 CP Controller CP Counter CP file_reader CP DCT CP Reg \
-      CP Quantization CP ZigZag CP RLC CP FileWriter
-FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Pack.vhd 2019/07/10.17:08:54 P.20131013
-PH work/Pack 1595094985 \
+      EN work/main 1595153149 CP Controller CP Counter CP file_reader CP DCT \
+      CP Registers CP Quantization CP ZigZag CP RLC CP Writer
+FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Pack.vhd 2020/07/19.14:40:49 P.20131013
+PH work/matrix 1595156967 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Pack.vhd \
       PB ieee/std_logic_1164 1381692176
-PB work/Pack 1595094986 \
+PB work/matrix 1595156968 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Pack.vhd \
-      PH work/Pack 1595094985
+      PH work/matrix 1595156967
 FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Quantization.vhd 2020/07/18.22:18:27 P.20131013
-EN work/Quantization 1595094997 \
+EN work/Quantization 1595153141 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Quantization.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_SIGNED 1381692178 PB ieee/NUMERIC_STD 1381692181
-AR work/Quantization/Behavioral 1595094998 \
+AR work/Quantization/Behavioral 1595153142 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Quantization.vhd \
-      EN work/Quantization 1595094997
-FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Reg.vhd 2019/07/04.18:18:40 P.20131013
-EN work/Reg 1595094995 \
+      EN work/Quantization 1595153141
+FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Reg.vhd 2020/07/19.05:05:18 P.20131013
+EN work/Reg 1595119089 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Reg.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/Reg/Behavioral 1595094996 \
+AR work/Reg/Behavioral 1595119090 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Reg.vhd \
-      EN work/Reg 1595094995
-FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/RLC.vhd 2019/07/11.22:36:11 P.20131013
-EN work/RLC 1595095001 \
+      EN work/Reg 1595119089
+FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Registers.vhd 2020/07/19.14:54:47 P.20131013
+EN work/Registers 1595155008 \
+      FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Registers.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/Registers/Behavioral 1595155009 \
+      FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Registers.vhd \
+      EN work/Registers 1595155008
+FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/RLC.vhd 2020/07/19.14:06:50 P.20131013
+EN work/RLC 1595153145 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/RLC.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
-      PB ieee/STD_LOGIC_UNSIGNED 1381692179 PB work/Pack 1595094986
-AR work/RLC/Behavioral 1595095002 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179 PB work/Pack 1595153130
+AR work/RLC/Behavioral 1595153146 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/RLC.vhd \
-      EN work/RLC 1595095001
-FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/ZigZag.vhd 2019/07/11.22:13:59 P.20131013
-EN work/ZigZag 1595094999 \
+      EN work/RLC 1595153145
+FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Writer.vhd 2020/07/19.05:05:18 P.20131013
+EN work/Writer 1595153147 \
+      FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Writer.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_SIGNED 1381692178 PB std/TEXTIO 1381692176
+AR work/Writer/Behavioral 1595153148 \
+      FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/Writer.vhd \
+      EN work/Writer 1595153147
+FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/ZigZag.vhd 2020/07/19.15:35:50 P.20131013
+EN work/ZigZag 1595156969 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/ZigZag.vhd \
-      PB ieee/std_logic_1164 1381692176 PB work/Pack 1595094986
-AR work/ZigZag/Behavioral 1595095000 \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179 PB work/matrix 1595156968
+AR work/ZigZag/Behavioral 1595156970 \
       FL C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/ZigZag.vhd \
-      EN work/ZigZag 1595094999
+      EN work/ZigZag 1595156969

@@ -1,0 +1,8 @@
+vhdl work "ArrayPack.vhd"
+vhdl work "ZigZag.vhd"
+vhdl work "RLC.vhd"
+vhdl work "Reg8_8.vhd"
+vhdl work "Quantization.vhd"
+vhdl work "FileReader.vhd"
+vhdl work "DCT.vhd"
+vhdl work "main.vhd"

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/test_quantization_isim_beh.exe" -prj "C:/Users/taravat/Desktop/fpga-project/fpgaProject/imageCompression2/test_quantization_beh.prj" "work.test_quantization" 

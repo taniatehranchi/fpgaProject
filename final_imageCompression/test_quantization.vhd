@@ -5,10 +5,10 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_SIGNED.ALL;
 
  
-ENTITY quantization_test IS
-END quantization_test;
+ENTITY test_quantization IS
+END test_quantization;
  
-ARCHITECTURE behavior OF quantization_test IS 
+ARCHITECTURE behavior OF test_quantization IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
@@ -22,7 +22,10 @@ ARCHITECTURE behavior OF quantization_test IS
          in5 : IN  std_logic_vector(31 downto 0);
          in6 : IN  std_logic_vector(31 downto 0);
          in7 : IN  std_logic_vector(31 downto 0);
-         count : IN  std_logic_vector(2 downto 0);
+			
+			enable:	IN std_logic;
+			clk : IN std_logic;
+
          out0 : OUT  std_logic_vector(31 downto 0);
          out1 : OUT  std_logic_vector(31 downto 0);
          out2 : OUT  std_logic_vector(31 downto 0);
@@ -30,7 +33,8 @@ ARCHITECTURE behavior OF quantization_test IS
          out4 : OUT  std_logic_vector(31 downto 0);
          out5 : OUT  std_logic_vector(31 downto 0);
          out6 : OUT  std_logic_vector(31 downto 0);
-         out7 : OUT  std_logic_vector(31 downto 0)
+         out7 : OUT  std_logic_vector(31 downto 0);
+			oe	:	OUT std_logic
         );
     END COMPONENT;
     
@@ -44,8 +48,10 @@ ARCHITECTURE behavior OF quantization_test IS
    signal in5 : std_logic_vector(31 downto 0) := (others => '0');
    signal in6 : std_logic_vector(31 downto 0) := (others => '0');
    signal in7 : std_logic_vector(31 downto 0) := (others => '0');
-   signal count : std_logic_vector(2 downto 0) := (others => '0');
-
+	
+	signal clk : std_logic;
+	signal enable : std_logic;
+		
  	--Outputs
    signal out0 : std_logic_vector(31 downto 0);
    signal out1 : std_logic_vector(31 downto 0);
@@ -55,9 +61,9 @@ ARCHITECTURE behavior OF quantization_test IS
    signal out5 : std_logic_vector(31 downto 0);
    signal out6 : std_logic_vector(31 downto 0);
    signal out7 : std_logic_vector(31 downto 0);
-   -- No clocks detected in port list. Replace <clock> below with 
-   -- appropriate port name 
- 
+	
+	signal oe:std_logic;
+
  
 BEGIN
  
@@ -71,7 +77,10 @@ BEGIN
           in5 => in5,
           in6 => in6,
           in7 => in7,
-          count => count,
+			 
+			 enable => enable,
+			 clk => clk,
+
           out0 => out0,
           out1 => out1,
           out2 => out2,
@@ -79,11 +88,15 @@ BEGIN
           out4 => out4,
           out5 => out5,
           out6 => out6,
-          out7 => out7
+          out7 => out7,
+			 
+			 oe => oe
         );
 		  
 
-	count<="000" after 50 ns,"001" after 100 ns,"010" after 150 ns, "011" after 200 ns, "100" after 250 ns,"101" after 300 ns,"110" after 350 ns,"111" after 400 ns, "000" after 450 ns;
+	clk<= not clk after 50 ns;
+	enable<='1' after 20 ns;
+	
 	in0<=conv_std_logic_vector(150,32);
 	in1<=conv_std_logic_vector(180,32);
 	in2<=conv_std_logic_vector(210,32);

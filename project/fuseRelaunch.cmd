@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "G:/FPGAProject/project/mtb_isim_beh.exe" -prj "G:/FPGAProject/project/mtb_beh.prj" "work.mtb" 
