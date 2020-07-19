@@ -25,6 +25,7 @@ begin
 		if (clk' event and clk='1') then
 			if(enable='1') then
 				if(clear='1') then
+					--clear registers
 					r0<= std_logic_vector(to_unsigned(0,output0'Length));
 					r1<= std_logic_vector(to_unsigned(0,output0'Length));
 					r2<= std_logic_vector(to_unsigned(0,output0'Length));
@@ -34,6 +35,7 @@ begin
 					r6<= std_logic_vector(to_unsigned(0,output0'Length));
 					r7<= std_logic_vector(to_unsigned(0,output0'Length));
 				else
+					--assign input to registers
 					r0 <= input0;
 					r1 <= input1;
 					r2 <= input2;
@@ -44,6 +46,7 @@ begin
 					r7 <= input7;
 				end if;
 			else
+				--clear and disable registers
 				r0<= std_logic_vector(to_unsigned(0,output0'Length));
 				r1<= std_logic_vector(to_unsigned(0,output0'Length));
 				r2<= std_logic_vector(to_unsigned(0,output0'Length));
@@ -56,6 +59,7 @@ begin
 		end if;
 		
 	end process;
+	--assign registers to output
 	output0<=r0;
 	output1<=r1;
 	output2<=r2;
