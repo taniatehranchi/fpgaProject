@@ -14,7 +14,7 @@ architecture structural of main is
 	component Controller
 		PORT(
 			clk			: in std_logic;
-			en1,en2,en3	: out std_logic
+			enabled1, enabled2, enabled3	: out std_logic
 		);
 	end component;
 	
