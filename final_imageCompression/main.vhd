@@ -81,9 +81,9 @@ architecture structural of main is
 	
 	component RLC
 		PORT(
-			x					: in 	matrix64;
-			y1,y2				: out std_logic_vector (31 downto 0);
-			clk,reset,en	: in 	std_logic;
+			inputMatrix	: in matrix64;
+			precedingZeros, value : out std_logic_vector (31 downto 0);
+			clk, reset, enable	: in 	std_logic;
 			oe					: out std_logic
 		);
 	end component;
