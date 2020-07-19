@@ -73,7 +73,7 @@ architecture structural of main is
 	component ZigZag 
 		PORT(
 			x0,x1,x2,x3,x4,x5,x6,x7	: in  std_logic_vector(31 downto 0);
-			y								: out memArray64;
+			y								: out matrix64;
 			clk,reset,en				: in  std_logic;
 			oe								: out std_logic
 		);
@@ -81,7 +81,7 @@ architecture structural of main is
 	
 	component RLC
 		PORT(
-			x					: in 	memArray64;
+			x					: in 	matrix64;
 			y1,y2				: out std_logic_vector (31 downto 0);
 			clk,reset,en	: in 	std_logic;
 			oe					: out std_logic
@@ -95,7 +95,7 @@ architecture structural of main is
 	signal q0,q1,q2,q3,q4,q5,q6,q7 	: std_logic_vector(31 downto 0);
 	signal z0,z1,z2,z3,z4,z5,z6,z7 	: std_logic_vector(31 downto 0);
 	signal c									: std_logic_vector(2 downto 0);
-	signal m									: memArray64;
+	signal m									: matrix64;
 	
 	signal enReg,enZigZag,enRLC,en,enWrite 		: std_logic;
 	signal l1,l2											: std_logic_vector(31 downto 0);

@@ -15,7 +15,7 @@ use work.Pack.all;
 entity ZigZag is
 	PORT(
 		x0,x1,x2,x3,x4,x5,x6,x7	: in 		std_logic_vector(31 downto 0);
-		y								: out 	memArray64;
+		y								: out 	matrix64;
 		clk,reset,en				: in 		std_logic;
 		oe								: out 	std_logic
 	);

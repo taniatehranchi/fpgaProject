@@ -42,7 +42,7 @@ ARCHITECTURE behavior OF RLC_TestBench IS
  
     COMPONENT RLC
     PORT(
-         x : IN  memArray64;
+         x : IN  matrix64;
          y1 : OUT  std_logic_vector(31 downto 0);
          y2 : OUT  std_logic_vector(31 downto 0);
          clk : IN  std_logic;
@@ -52,7 +52,7 @@ ARCHITECTURE behavior OF RLC_TestBench IS
     
 
    --Inputs
-   signal x : memArray64 		:=(707,707,707,707,0,0,0,0,924,383,-383,-924,0,0,0,0,707,-707,-707,707,0,0,0,0,
+   signal x : matrix64 		:=(707,707,707,707,0,0,0,0,924,383,-383,-924,0,0,0,0,707,-707,-707,707,0,0,0,0,
 											383,-924,924,-383,0,0,0,0,0,0,0,0,981,831,556,195,0,0,0,0,831,-195,-981,-556,
 											0,0,0,0,556,-981,195,831,0,0,0,0,195,-556,831,-981);
    signal clk : std_logic := '0';
