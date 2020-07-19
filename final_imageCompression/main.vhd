@@ -108,7 +108,6 @@ begin
 		port map(clk,enReg,enZigZag,en);
 		
 	U1:Counter
-		generic map(3)
 		port map(clk,enReg,c);
 	
 	U2:file_reader 
