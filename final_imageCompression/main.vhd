@@ -25,9 +25,10 @@ architecture structural of main is
 		);
 	end component;
 	
+		--file_name 	: string:="finalImage.txt"; 
 	component file_reader
 		generic (
-			file_name 	: string:="C:\Users\Tani\Desktop\FPGA\fpgaProject\final_imageCompression\finalImage.txt"; 
+			file_name 	: string:="finalImage.txt";
 			width 		: positive :=8
 		);
 		port (
@@ -108,7 +109,7 @@ begin
 		port map(clk,enReg,c);
 	
 	U2:file_reader 
-		generic map("C:\Users\Tani\Desktop\FPGA\fpgaProject\final_imageCompression\finalImage.txt",8)
+		generic map("C:\Users\Tani\Desktop\FPGA\fpgaProject\final_imageCompression\.txt",8)
 		port map(clk,reset,
 					r0,r1,r2,r3,r4,r5,r6,r7);
 	
