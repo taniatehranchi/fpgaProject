@@ -23,9 +23,9 @@ begin
 
 				else
 
-					if cnt == 0 then
+					if cnt = 0 then
 						temp1 <= '1';
-					elsif cnt == 1 then
+					elsif cnt = 1 then
 						temp2 <= '1';
 					else
 						temp3 <= '1';							
