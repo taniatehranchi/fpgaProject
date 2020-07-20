@@ -1,6 +1,6 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
-use work.Pack.all;
+use work.matrix.all;
  
 ENTITY RLC_TestBench IS
 END RLC_TestBench;
