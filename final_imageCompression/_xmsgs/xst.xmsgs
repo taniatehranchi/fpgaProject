@@ -5,5 +5,8 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="error" file="Xst" num="1914" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/FileReader.vhd</arg>&quot; line <arg fmt="%d" index="2">47</arg>: File &lt;<arg fmt="%s" index="3">fileIn</arg>&gt; does not exist.
+</msg>
+
 </messages>
 

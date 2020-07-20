@@ -1,0 +1,3 @@
+vhdl work "matrix.vhd"
+vhdl work "ZigZag.vhd"
+vhdl work "test_zigzag.vhd"

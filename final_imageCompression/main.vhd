@@ -1,7 +1,6 @@
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use work.Pack.all;
+use work.matrix.all;
 
 entity main is
 	PORT(
@@ -11,50 +10,17 @@ end main;
 
 architecture structural of main is
 
-	component Controller
-		PORT(
-			clk			: in std_logic;
-			en1,en2,en3	: out std_logic
-		);
-	end component;
-	
-	component Counter
-		PORT(
-			clk,enable: in std_logic;
-			dout : out std_logic_vector(2 downto 0)
-		);
-	end component;
-	
 	component file_reader
 		generic (
-			file_name 	: string:="C:\Users\Tani\Desktop\FPGA\fpgaProject\final_imageCompression\finalImage.txt"; 
+			file_name 	: string:="finalImage.txt"; 
 			width 		: positive :=8
 		);
 		port (
 			CLK, RESET : in std_logic; 
 			Q0,Q1,Q2,Q3,Q4,Q5,Q6,Q7 : out std_logic_vector(width-1 downto 0)
 		);
-		
 	end component;
-	
-	component Writer
-		Port ( 
-			clk,en 	: in STD_LOGIC; 
-			a,b 	: in STD_LOGIC_VECTOR (31 downto 0)
-		);
-	end component;
-	
-	component Registers
-		GENERIC(
-			n		: integer range 1 to 32:=8
-		);
-		PORT(
-			input0,input1,input2,input3,input4,input5,input6,input7 : in std_logic_vector(n-1 downto 0);
-			clk,clear,enable					: in std_logic;
-			output0,output1,output2,output3,output4,output5,output6,output7	: out std_logic_vector(n-1 downto 0)
-		);
-	end component;
-	
+
 	component DCT 
 		PORT(
 			in0,in1,in2,in3,in4,in5,in6,in7 : in std_logic_vector(7 downto 0);
@@ -70,15 +36,44 @@ architecture structural of main is
 		);
 	end component;
 	
-	component ZigZag 
+	component Counter
 		PORT(
-			x0,x1,x2,x3,x4,x5,x6,x7	: in  std_logic_vector(31 downto 0);
-			y								: out matrix64;
-			clk,reset,en				: in  std_logic;
-			oe								: out std_logic
+			clk,enable: in std_logic;
+			dout : out std_logic_vector(2 downto 0)
 		);
 	end component;
-	
+
+	component Registers
+		PORT(
+		input0,input1,input2,input3,input4,input5,input6,input7 : in std_logic_vector(31 downto 0);
+		clk,enable,clear	: in std_logic;
+		output0,output1,output2,output3,output4,output5,output6,output7	: out std_logic_vector(31 downto 0)
+	);
+	end component;
+
+	component ZigZag 
+		PORT (
+		  input0, input1, input2, input3, input4, input5, input6, input7 : IN std_logic_vector(31 DOWNTO 0);
+		  outputMatrix : OUT matrix64;
+		  clk, reset, enable : IN std_logic;
+		  oe : OUT std_logic
+		);
+	end component;
+
+	component Controller
+		PORT(
+			clk			: in std_logic;
+			en1,en2,en3	: out std_logic
+		);
+	end component;
+		
+	component Writer
+		Port ( 
+			clk,en 	: in STD_LOGIC; 
+			a,b 	: in STD_LOGIC_VECTOR (31 downto 0)
+		);
+	end component;
+		
 	component RLC
 		PORT(
 			x					: in 	matrix64;
@@ -90,57 +85,53 @@ architecture structural of main is
 	
 	
 	
-	signal r0,r1,r2,r3,r4,r5,r6,r7 	: std_logic_vector(7 downto 0);
+	signal a0,a1,a2,a3,a4,a5,a6,a7 	: std_logic_vector(7 downto 0);
+	signal b0,b1,b2,b3,b4,b5,b6,b7 	: std_logic_vector(31 downto 0);
+	signal c0,c1,c2,c3,c4,c5,c6,c7 	: std_logic_vector(31 downto 0);
 	signal d0,d1,d2,d3,d4,d5,d6,d7 	: std_logic_vector(31 downto 0);
-	signal q0,q1,q2,q3,q4,q5,q6,q7 	: std_logic_vector(31 downto 0);
-	signal z0,z1,z2,z3,z4,z5,z6,z7 	: std_logic_vector(31 downto 0);
-	signal c									: std_logic_vector(2 downto 0);
-	signal m									: matrix64;
-	
-	signal enReg,enZigZag,enRLC,en,enWrite 		: std_logic;
-	signal l1,l2											: std_logic_vector(31 downto 0);
+	signal e0,e1							: std_logic_vector(31 downto 0);
+	signal count							: std_logic_vector(2 downto 0);
+	signal output_zigzag					: matrix64;
+	signal enable_REG,enable_zigzag,enable_RLC,enable_writer,en 	: std_logic;
 	
 begin
 	U0:Controller
-		port map(clk,enReg,enZigZag,en);
+		port map(clk,enable_REG,enable_zigzag,en);
 		
 	U1:Counter
-		port map(clk,enReg,c);
+		port map(clk,enable_REG,count);
 	
 	U2:file_reader 
-		generic map("C:\Users\Tani\Desktop\FPGA\fpgaProject\final_imageCompression\finalImage.txt",8)
+		generic map("finalImage.txt",8)
 		port map(clk,reset,
-					r0,r1,r2,r3,r4,r5,r6,r7);
+					a0,a1,a2,a3,a4,a5,a6,a7);
 	
 	U3:DCT
-		port map(r0,r1,r2,r3,r4,r5,r6,r7,
-					d0,d1,d2,d3,d4,d5,d6,d7);
+		port map(a0,a1,a2,a3,a4,a5,a6,a7,
+					b0,b1,b2,b3,b4,b5,b6,b7);
 	
 	U4:Registers
-		generic map(32)
-		port map(d0,d1,d2,d3,d4,d5,d6,d7,
-					clk,reset,enReg,
-					q0,q1,q2,q3,q4,q5,q6,q7);
+		port map(b0,b1,b2,b3,b4,b5,b6,b7,
+					clk,enable_REG,reset,
+					c0,c1,c2,c3,c4,c5,c6,c7);
 	
 	U5:Quantization
-		port map(q0,q1,q2,q3,q4,q5,q6,q7,
-					c,
-					z0,z1,z2,z3,z4,z5,z6,z7);
+		port map(c0,c1,c2,c3,c4,c5,c6,c7,count,d0,d1,d2,d3,d4,d5,d6,d7);
 	
 	U6:ZigZag
-		port map(z0,z1,z2,z3,z4,z5,z6,z7,
-					m,
-					clk,reset,enZigZag,
-					enRLC);
+		port map(d0,d1,d2,d3,d4,d5,d6,d7,
+					output_zigzag,
+					clk,reset,enable_zigzag,
+					enable_RLC);
 	U7:RLC 
 		port map(
-					m,
-					l1,l2,clk,
-					reset,enRLC,
-					enWrite);
+					output_zigzag,
+					e0,e1,clk,
+					reset,enable_RLC,
+					enable_writer);
 	
 	U8:Writer
-		port map(clk,enWrite,l1,l2);
+		port map(clk,enable_writer,e0,e1);
 		
 end structural;
 

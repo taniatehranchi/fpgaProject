@@ -25,7 +25,8 @@ architecture Behavioral of DCT is
 											(0,0,0,0,195,556,831,981)
 											);
 	signal temp1,temp2,temp3,temp4,temp5,temp6,temp7,temp8 : std_logic_vector(8 downto 0);
-	signal test:std_logic_vector(14 downto 0);
+	signal test:integer;
+	
 										
 begin
 
@@ -38,14 +39,15 @@ begin
 	temp7<=(in2(7)&in2)-(in5(7)&in5);
 	temp8<=(in3(7)&in3)-(in4(7)&in4);
 	
+	test<=DCT(1,0);
 	out0<=conv_std_logic_vector(conv_integer((("000000"&temp1)*conv_std_logic_vector(DCT(0,0),15))+(("000000"&temp2)*conv_std_logic_vector(DCT(0,1),15))+(("000000"&temp3)*conv_std_logic_vector(DCT(0,2),15))+(("000000"&temp4)*conv_std_logic_vector(DCT(0,3),15)))/2000,32);
 	out1<=conv_std_logic_vector(conv_integer((("000000"&temp1)*conv_std_logic_vector(DCT(1,0),15))+(("000000"&temp2)*conv_std_logic_vector(DCT(1,1),15))-(("000000"&temp3)*conv_std_logic_vector(DCT(1,2),15))-(("000000"&temp4)*conv_std_logic_vector(DCT(1,3),15)))/2000,32);
 	out2<=conv_std_logic_vector(conv_integer((("000000"&temp1)*conv_std_logic_vector(DCT(2,0),15))-(("000000"&temp2)*conv_std_logic_vector(DCT(2,1),15))-(("000000"&temp3)*conv_std_logic_vector(DCT(2,2),15))+(("000000"&temp4)*conv_std_logic_vector(DCT(2,3),15)))/2000,32);
 	out3<=conv_std_logic_vector(conv_integer((("000000"&temp1)*conv_std_logic_vector(DCT(3,0),15))-(("000000"&temp2)*conv_std_logic_vector(DCT(3,1),15))+(("000000"&temp3)*conv_std_logic_vector(DCT(3,2),15))-(("000000"&temp4)*conv_std_logic_vector(DCT(3,3),15)))/2000,32);
-	out4<=conv_std_logic_vector(conv_integer((("000000"&temp1)*conv_std_logic_vector(DCT(4,4),15))+(("000000"&temp2)*conv_std_logic_vector(DCT(4,5),15))+(("000000"&temp3)*conv_std_logic_vector(DCT(4,6),15))+(("000000"&temp4)*conv_std_logic_vector(DCT(4,7),15)))/2000,32);
-	out5<=conv_std_logic_vector(conv_integer((("000000"&temp1)*conv_std_logic_vector(DCT(5,4),15))-(("000000"&temp2)*conv_std_logic_vector(DCT(5,5),15))-(("000000"&temp3)*conv_std_logic_vector(DCT(5,6),15))-(("000000"&temp4)*conv_std_logic_vector(DCT(5,7),15)))/2000,32);
-	out6<=conv_std_logic_vector(conv_integer((("000000"&temp1)*conv_std_logic_vector(DCT(6,4),15))-(("000000"&temp2)*conv_std_logic_vector(DCT(6,5),15))+(("000000"&temp3)*conv_std_logic_vector(DCT(6,6),15))+(("000000"&temp4)*conv_std_logic_vector(DCT(6,7),15)))/2000,32);
-	out7<=conv_std_logic_vector(conv_integer((("000000"&temp1)*conv_std_logic_vector(DCT(7,4),15))-(("000000"&temp2)*conv_std_logic_vector(DCT(7,5),15))+(("000000"&temp3)*conv_std_logic_vector(DCT(7,6),15))-(("000000"&temp4)*conv_std_logic_vector(DCT(7,7),15)))/2000,32);
+	out4<=conv_std_logic_vector(conv_integer((("000000"&temp5)*conv_std_logic_vector(DCT(4,4),15))+(("000000"&temp6)*conv_std_logic_vector(DCT(4,5),15))+(("000000"&temp7)*conv_std_logic_vector(DCT(4,6),15))+(("000000"&temp8)*conv_std_logic_vector(DCT(4,7),15)))/2000,32);
+	out5<=conv_std_logic_vector(conv_integer((("000000"&temp5)*conv_std_logic_vector(DCT(5,4),15))-(("000000"&temp6)*conv_std_logic_vector(DCT(5,5),15))-(("000000"&temp7)*conv_std_logic_vector(DCT(5,6),15))-(("000000"&temp8)*conv_std_logic_vector(DCT(5,7),15)))/2000,32);
+	out6<=conv_std_logic_vector(conv_integer((("000000"&temp5)*conv_std_logic_vector(DCT(6,4),15))-(("000000"&temp6)*conv_std_logic_vector(DCT(6,5),15))+(("000000"&temp7)*conv_std_logic_vector(DCT(6,6),15))+(("000000"&temp8)*conv_std_logic_vector(DCT(6,7),15)))/2000,32);
+	out7<=conv_std_logic_vector(conv_integer((("000000"&temp5)*conv_std_logic_vector(DCT(7,4),15))-(("000000"&temp6)*conv_std_logic_vector(DCT(7,5),15))+(("000000"&temp7)*conv_std_logic_vector(DCT(7,6),15))-(("000000"&temp8)*conv_std_logic_vector(DCT(7,7),15)))/2000,32);
 
 
 end Behavioral;

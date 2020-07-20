@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/test_main_isim_beh.exe" -prj "C:/Users/taravat/Desktop/fpga-project/fpgaProject/final_imageCompression/test_main_beh.prj" "work.test_main" 

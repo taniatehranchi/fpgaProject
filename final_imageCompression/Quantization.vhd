@@ -17,7 +17,7 @@ end quantization;
 architecture Behavioral of quantization is
 
 	type matrix8_8 is array(0 to 7,0 to 7) of integer range 0 to 256;
-	signal quantization : matrix8_8:=((8,36,36,36,39,45,52,65),
+	constant quantization : matrix8_8:=((8,36,36,36,39,45,52,65),
 													(36,36,36,37,41,47,56,68),
 													(36,36,38,42,47,54,64,78),
 													(36,37,42,50,59,69,81,98),
